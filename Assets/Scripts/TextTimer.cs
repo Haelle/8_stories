@@ -11,6 +11,11 @@ public class TextTimer : MonoBehaviour {
     private float _timer = 0f;
     private int _currentMessageIndex = 0;
 
+    public void Ok()
+    {
+
+    }
+
     protected void Start()
     {
         _text.text = _messages[_currentMessageIndex];
