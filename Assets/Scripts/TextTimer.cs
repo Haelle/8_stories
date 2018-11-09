@@ -13,7 +13,6 @@ public class TextTimer : MonoBehaviour {
 
     public void Ok()
     {
-
     }
 
     protected void Start()
