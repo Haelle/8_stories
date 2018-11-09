@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameScripts", "GameScripts.csproj", "{A2734BE1-E7A1-52D7-0AAB-B166DEB0FD28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests.csproj", "{205FAE8E-1D9E-D566-BE5F-B45EF7C698E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2734BE1-E7A1-52D7-0AAB-B166DEB0FD28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2734BE1-E7A1-52D7-0AAB-B166DEB0FD28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2734BE1-E7A1-52D7-0AAB-B166DEB0FD28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2734BE1-E7A1-52D7-0AAB-B166DEB0FD28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{205FAE8E-1D9E-D566-BE5F-B45EF7C698E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{205FAE8E-1D9E-D566-BE5F-B45EF7C698E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{205FAE8E-1D9E-D566-BE5F-B45EF7C698E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{205FAE8E-1D9E-D566-BE5F-B45EF7C698E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
