@@ -51,12 +51,12 @@
   <ItemGroup>
     <Compile Include="Architecture\A.cs" />
     <Compile Include="Architecture\An.cs" />
+    <Compile Include="Architecture\Builders\NarrativeEventBuilder.cs" />
     <Compile Include="Architecture\Builders\StoryEngineBuilder.cs" />
-    <Compile Include="Architecture\Builders\StoryEventBuilder.cs" />
-    <Compile Include="Architecture\Builders\StorySceneBuilder.cs" />
     <Compile Include="Events\Choice\ChoiceEventTests.cs" />
     <Compile Include="Events\Choice\Options\AlwaysTrueOptionTests.cs" />
     <Compile Include="Events\Choice\Options\ConditionalOptionTests.cs" />
+    <Compile Include="Events\EndEventTests.cs" />
     <Compile Include="Events\Narrative\NarrativeEventTests.cs" />
     <Compile Include="Mockups\PlayerContext.cs" />
     <Compile Include="StoryEngineTests.cs" />

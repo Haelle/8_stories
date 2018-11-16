@@ -6,6 +6,7 @@ namespace _8StoryCoreTests.Architecture.Builders
 {
   public class StoryEngineBuilder
   {
+    /*
     private StoryScene _scene;
 
     public StoryEngineBuilder(StoryScene scene)
@@ -25,5 +26,6 @@ namespace _8StoryCoreTests.Architecture.Builders
     {
       return new StoryEngine(new PlayerContext(), _scene);
     }
+    */
   }
 }

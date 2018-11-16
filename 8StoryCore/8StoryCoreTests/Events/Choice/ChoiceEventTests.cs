@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using NUnit.Framework;
 using _8StoryCore;
 using _8StoryCore.Events.Choice;
@@ -84,6 +85,26 @@ namespace _8StoryCoreTests.Events.Choice
 
         Assert.IsTrue(choiceEvent.Choose(firstChoice, new DummyContext()));
         Assert.AreEqual(choiceEvent.CurrentChoice, firstChoice);
+      }
+    }
+
+    public class Handled
+    {
+      [Test]
+      public void It_is_not_handled_when_choice_not_made()
+      {
+        var choiceEvent = new ChoiceEvent(new CheckChoiceEventInfo());
+
+        Assert.IsFalse(choiceEvent.Handled);
+      }
+
+      [Test]
+      public void It_is_handled_when_choice_made()
+      {
+        var choiceEvent = new ChoiceEvent(new CheckChoiceEventInfo());
+        choiceEvent.Choose(choiceEvent.Choices.First(), new DummyContext());
+
+        Assert.IsTrue(choiceEvent.Handled);
       }
     }
   }

@@ -2,21 +2,24 @@
 
 namespace _8StoryCore.Events.Narrative
 {
-  public class NarrativeEvent : IStoryEvent
+  public sealed class NarrativeEvent : IStoryEvent
   {
+    public EventType Type => _eventInfo.Type;
+    public bool Handled { get; private set; }
+    public IStoryEvent NextEvent { get; }
     private readonly INarrativeEventInfo _eventInfo;
-    private readonly IPlayerContext _context;
 
-    public NarrativeEvent(INarrativeEventInfo firstEventInfo, IPlayerContext context)
+    public NarrativeEvent(INarrativeEventInfo firstEventInfo)
     {
       _eventInfo = firstEventInfo;
-      _context = context;
     }
 
-    public IEnumerable<EventResult> PlayEvent()
+    public IEnumerable<EventResult> PlayEvent(IPlayerContext context)
     {
-      foreach (var result in _eventInfo.GetResults(_context))
+      foreach (var result in _eventInfo.GetResults(context))
         yield return result;
+
+      Handled = true;
     }
   }
 }

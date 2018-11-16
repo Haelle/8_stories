@@ -7,6 +7,9 @@ namespace _8StoryCore.Events.Choice
 {
   public sealed class ChoiceEvent : IStoryEvent
   {
+    public EventType Type { get; }
+    public bool Handled { get; private set; }
+    public IStoryEvent NextEvent { get; }
     private readonly IChoiceEventInfo _choiceInfo;
     internal IChoiceOption CurrentChoice;
 
@@ -25,6 +28,7 @@ namespace _8StoryCore.Events.Choice
       if (!choice.CanChoose(ctx)) return false;
 
       CurrentChoice = choice;
+      Handled = true;
       return true;
     }
   }

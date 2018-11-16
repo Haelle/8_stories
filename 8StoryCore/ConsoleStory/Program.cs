@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using _8StoryCore;
 using _8StoryCore.Events;
@@ -14,8 +15,9 @@ namespace ConsoleStory
     static void Main(string[] args)
     {
       var playerContext = new PlayerContext();
-      var firstScene = new StoryScene();
-      var engine = new StoryEngine(playerContext, firstScene);
+      var firstEvent = new NarrativeEvent(new StartingEventInfo());
+      var firstScene = new StoryScene<PlayerContext>(firstEvent, playerContext);
+      var engine = new StoryEngine<PlayerContext>(playerContext, firstScene);
 
       while (engine.StoryStatus != StoryStatus.Ended)
       {
@@ -28,7 +30,7 @@ namespace ConsoleStory
           {
             case NarrativeEvent _:
               var narrativeEvent = (NarrativeEvent) currentEvent;
-              foreach (var narrativeResult in narrativeEvent.PlayEvent())
+              foreach (var narrativeResult in narrativeEvent.PlayEvent(playerContext))
                 Console.WriteLine(narrativeResult.Text);
 
               break;
@@ -59,5 +61,15 @@ namespace ConsoleStory
 
       Console.WriteLine("Story Ended");
     }
+  }
+
+  internal class StartingEventInfo : INarrativeEventInfo
+  {
+    public IEnumerable<EventResult> GetResults(IPlayerContext context)
+    {
+      throw new NotImplementedException();
+    }
+
+    public EventType Type { get; }
   }
 }

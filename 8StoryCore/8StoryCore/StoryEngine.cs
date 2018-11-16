@@ -8,16 +8,16 @@ namespace _8StoryCore
     Ended
   }
 
-  public class StoryEngine
+  public class StoryEngine<T>
   {
     public StoryStatus StoryStatus { get; private set; }
-    public StoryScene CurrentScene { get; private set; }
+    public StoryScene<T> CurrentScene { get; private set; }
 
-    public StoryEngine(IPlayerContext context, StoryScene scene)
+    public StoryEngine(IPlayerContext context, StoryScene<T> scene)
     {
     }
 
-    public StoryScene NextScene()
+    public StoryScene<T> NextScene()
     {
       return null;
     }
