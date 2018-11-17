@@ -1,9 +1,25 @@
 ﻿namespace _8StoryCore.Events
 {
-    public class EndEvent : IStoryEvent
+  public enum EndEventType
+  {
+    Normal = 0,
+    Victory,
+    GameOver
+  }
+  public sealed class EndEvent : IStoryEvent
+  {
+    public string Name { get; }
+    public EndEventType EndType { get; }
+
+    public EndEvent()
     {
-      public EventType Type => EventType.Ending;
-      public bool Handled { get; }
-      public IStoryEvent NextEvent => null;
+      Name = "Normal";
     }
+
+    public EndEvent(string name, EndEventType endType)
+    {
+      Name = name;
+      EndType = endType;
+    }
+  }
 }

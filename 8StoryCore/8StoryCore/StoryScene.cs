@@ -1,43 +1,27 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using _8StoryCore.Events;
 
 namespace _8StoryCore
 {
-  public enum SceneStatus
-  {
-    Telling = 0,
-    Ended
-  }
-
-  public interface ISceneInfo
-  {
-    IEnumerable<IStoryEvent> NextEvent();
-  }
-
   public class StoryScene
   {
-    internal IStoryEvent CurrentEvent { get; private set; }
+    private readonly IStorySceneInfo _sceneInfo;
 
-    public StoryScene(ISceneInfo sceneInfo, IPlayerContext context)
+    public StoryScene(IStorySceneInfo sceneInfo)
     {
-      //if (startingEvent.Type != EventType.Starting) throw new ArgumentException("not a starting event !");
-      //if (!(context is T)) throw new InvalidCastException("context is not a good type");
-
-      //CurrentEvent = startingEvent;
+      _sceneInfo = sceneInfo;
     }
 
-    public SceneStatus SceneStatus { get; private set; }
+    public string Name => _sceneInfo.Name;
 
-    public IStoryEvent NextEvent()
+    public IEnumerable<IStoryEvent> NextEvent()
     {
-      if (!CurrentEvent.Handled) throw new UnhandledStoryEventException();
-      if (CurrentEvent.NextEvent == null && CurrentEvent.Type != EventType.Ending) throw new SceneMissingEndEventException();
-
-      return CurrentEvent.NextEvent;
+      foreach (var storyEvent in _sceneInfo.NextEvent())
+      {
+        yield return storyEvent;
+      }
     }
   }
-
-  public class SceneMissingEndEventException : Exception { }
-  public class UnhandledStoryEventException : Exception { }
 }

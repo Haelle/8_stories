@@ -1,75 +1,87 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using _8StoryCore;
 using _8StoryCore.Events;
-using _8StoryCore.Events.Choice;
-using _8StoryCore.Events.Narrative;
 
 namespace ConsoleStory
 {
   class Program
   {
-    class PlayerContext : IPlayerContext { }
-
     static void Main(string[] args)
     {
-      var playerContext = new PlayerContext();
-      var firstEvent = new NarrativeEvent(new StartingEventInfo());
-      var firstScene = new StoryScene<PlayerContext>(firstEvent, playerContext);
-      var engine = new StoryEngine<PlayerContext>(playerContext, firstScene);
+      var story = new Story();
+      // TODO: check story integrity
+      // TODO: all scenes are logical (define logical...) (no same scene name, choice name etc...)
+      var engine = new StoryEngine(story);
 
-      while (engine.StoryStatus != StoryStatus.Ended)
+      while (story.Status != StoryStatus.Ended)
       {
-        var currentScene = engine.NextScene();
-        while (currentScene.SceneStatus != SceneStatus.Ended)
+        Console.WriteLine("Choose what you want to do:");
+        // TODO: raise error if empty and story not ended !
+        var availableScenes = engine.AvailableScenes();
+        for (var i = 0; i < availableScenes.Count; i++)
         {
-          var currentEvent = currentScene.NextEvent();
-
-          switch (currentEvent)
-          {
-            case NarrativeEvent _:
-              var narrativeEvent = (NarrativeEvent) currentEvent;
-              foreach (var narrativeResult in narrativeEvent.PlayEvent(playerContext))
-                Console.WriteLine(narrativeResult.Text);
-
-              break;
-            case ChoiceEvent _:
-              var choiceEvent = (ChoiceEvent) currentEvent;
-              Console.WriteLine("Waiting for player choice");
-              // TODO: have a foreach with index ?
-              for (var i = 0; i < choiceEvent.Choices.Count(); i++)
-              {
-                var choice = choiceEvent.Choices[i];
-                Console.WriteLine("{0}. {1}", i, choice.Text);
-              }
-
-              var input = Console.ReadLine();
-              var intInput = short.Parse(input ?? throw new InvalidOperationException());
-              if (intInput > choiceEvent.Choices.Count) throw new ArgumentOutOfRangeException("Choice not available !");
-
-              choiceEvent.Choose(choiceEvent.Choices[intInput], playerContext);
-              break;
-            case EndEvent _:
-              Console.WriteLine("Scene Ended");
-              break;
-            default:
-              throw new InvalidCastException("unexpected child class");
-          }
+          var scene = availableScenes[i];
+          Console.WriteLine("{0}. {1}", i, scene.Name);
         }
+
+        var inputScene = Console.ReadLine();
+        var intInputScene = short.Parse(inputScene ?? throw new InvalidOperationException());
+        var selectedScene = availableScenes[intInputScene];
+        PlayScene(engine, selectedScene);
+
+        // TODO: raise error if more than one mandatory scene
+        var mandatoryScene = engine.MandatoryScene();
+        if (mandatoryScene != null) PlayScene(engine, mandatoryScene);
+
+        Console.ReadKey();
       }
 
       Console.WriteLine("Story Ended");
     }
-  }
 
-  internal class StartingEventInfo : INarrativeEventInfo
-  {
-    public IEnumerable<EventResult> GetResults(IPlayerContext context)
+    private static void PlayScene(StoryEngine engine, StoryScene selectedScene)
     {
-      throw new NotImplementedException();
-    }
+      // TODO: raise error if no more scene and not ended
+      foreach (var currentEvent in selectedScene.NextEvent())
+      {
+        switch (currentEvent)
+        {
+          case NarrationEvent _:
+            var narrationEvent = (NarrationEvent)currentEvent;
+            Console.WriteLine("{0}: {1}", narrationEvent.Speaker.ToString(), narrationEvent.Text);
+            break;
 
-    public EventType Type { get; }
+          case ChoiceEvent _:
+            var choiceEvent = (ChoiceEvent)currentEvent;
+            Console.WriteLine("Waiting for player choice");
+            // TODO : foreach with index ?
+            for (var i = 0; i < choiceEvent.Choices.Count; i++)
+            {
+              var choice = choiceEvent.Choices[i];
+              Console.WriteLine("{0}. {1}", i, choice.Text);
+            }
+
+            var input = Console.ReadLine();
+            var intInput = short.Parse(input ?? throw new InvalidOperationException());
+            choiceEvent.Choose(choiceEvent.Choices[intInput], engine.Context);
+            break;
+
+          case NotificationEvent _:
+            var notification = (NotificationEvent)currentEvent;
+            Console.WriteLine("Notification: {0}", notification.Text);
+            break;
+
+          case TestEvent _:
+            var test = (TestEvent)currentEvent;
+            Console.WriteLine("Test: {0}", test.ResultInfo);
+            break;
+
+          case EndEvent _:
+            var endEvent = (EndEvent)currentEvent;
+            Console.WriteLine("Scene Ended: {0} - {1}", endEvent.Name, endEvent.EndType);
+            break;
+        }
+      }
+    }
   }
 }

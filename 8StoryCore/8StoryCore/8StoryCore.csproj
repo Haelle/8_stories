@@ -42,17 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Events\Choice\Options\AlwaysTrueOption.cs" />
-    <Compile Include="Events\Choice\ChoiceEvent.cs" />
-    <Compile Include="Events\Choice\Options\ConditionalOption.cs" />
-    <Compile Include="Events\EndEvent.cs" />
-    <Compile Include="Events\Choice\Options\IChoiceOption.cs" />
-    <Compile Include="Events\Choice\IChoiceEventInfo.cs" />
-    <Compile Include="Events\Narrative\NarrativeEvent.cs" />
-    <Compile Include="Events\Narrative\EventResult.cs" />
-    <Compile Include="Events\Narrative\INarrativeEventInfo.cs" />
-    <Compile Include="Events\IStoryEvent.cs" />
+    <Compile Include="Events\ChoiceEvent.cs" />
+    <Compile Include="Choices\ChoiceOption.cs" />
+    <Compile Include="Events\TestEvent.cs" />
+    <Compile Include="Choices\IChoiceEventInfo.cs" />
     <Compile Include="IPlayerContext.cs" />
+    <Compile Include="IStory.cs" />
+    <Compile Include="Events\IStoryEvent.cs" />
+    <Compile Include="IStorySceneInfo.cs" />
+    <Compile Include="Events\NarrationEvent.cs" />
+    <Compile Include="Events\NotificationEvent.cs" />
     <Compile Include="StoryEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StoryScene.cs" />

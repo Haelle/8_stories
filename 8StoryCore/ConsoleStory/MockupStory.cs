@@ -1,87 +1,122 @@
 ﻿using System.Collections.Generic;
 using _8StoryCore;
+using _8StoryCore.Choices;
 using _8StoryCore.Events;
-using _8StoryCore.Events.Choice;
-using _8StoryCore.Events.Choice.Options;
-using _8StoryCore.Events.Narrative;
 
 namespace ConsoleStory
 {
-  public interface IStory
-  {
-    IEnumerable<StoryScene> NextScene();
-  }
-
-  public enum Mood
-  {
-    Willness
-  }
-
   public class PlayerContext : IPlayerContext
   {
-    public int Willness { get; private set; }
-    public EventResult IncreaseMood(Mood mood, int value)
+    public int Will { get; set; }
+    public int Agility => 50;
+    public bool CousinSaved { get; set; }
+
+    public NotificationEvent IncreaseWill(int i)
     {
-      Willness += value;
-      // TODO: create a sub class for notifications
-      return new EventResult("NONE", "Willness", ResultType.Notification);
+      Will += 1;
+      return new NotificationEvent("Will Increase");
     }
   }
 
-  public class Story1 : IStory
+  public class Story : IStory
   {
-    public PlayerContext Context;
-    public IEnumerable<StoryScene> NextScene()
+    public enum StorySpeaker
     {
-      yield return new StoryScene(new IntroSceneInfo(), Context);
-      yield return new StoryScene(new SnakeInfo(), Context);
+      King,
+      Princess,
+      Aunt,
+      Narrator,
+      Cousin
+    }
+
+    public IPlayerContext Context { get; }
+    public StoryStatus Status { get; set; }
+
+    public Story()
+    {
+      Context = new PlayerContext();
+    }
+    
+    public IEnumerable<IStorySceneInfo> NextSceneInfo()
+    {
+      var context = (PlayerContext) Context;
+      yield return new IntroSceneInfo(context);
+      yield return new SnakeSceneInfo(context);
     }
   }
 
-  public class IntroSceneInfo : ISceneInfo
+  public class IntroSceneInfo : IStorySceneInfo
   {
+    public string Name => "Intro";
+    private PlayerContext Context { get; }
+
+    public IntroSceneInfo(PlayerContext context)
+    {
+      Context = context;
+    }
+
     public IEnumerable<IStoryEvent> NextEvent()
     {
-      yield return new NarrativeEvent(new IntroEventInfo());
-      yield return new ChoiceEvent(new AuntChoiceInfo());
+      yield return new NarrationEvent(Story.StorySpeaker.King, text: "Yield before me !");
+      yield return new NarrationEvent(Story.StorySpeaker.Princess, text: "No ! I'm the Princess here");
+      yield return Context.IncreaseWill(1);
+      yield return new NarrationEvent(Story.StorySpeaker.King, text: "I yield to the Princess");
+      yield return new EndEvent();
     }
   }
-
-  public class IntroEventInfo : INarrativeEventInfo
+  
+  public class SnakeSceneInfo : IStorySceneInfo
   {
-    public EventType Type => EventType.Starting;
+    public string Name => "Snake Scene";
+    public PlayerContext Context { get; }
 
-    public IEnumerable<EventResult> GetResults(IPlayerContext icontext)
+    public SnakeSceneInfo(PlayerContext context)
     {
-      var context = (PlayerContext)icontext;
-      yield return new EventResult("King", "Intro");
-      yield return new EventResult("Princess", "No!");
-      yield return new EventResult("King", "Yes !");
-      yield return new EventResult("Princess", "I'm the Princess here");
-      yield return context.IncreaseMood(Mood.Willness, 1);
+      Context = context;
     }
-  }
-
-  public class AuntChoiceInfo : IChoiceEventInfo
-  {
-    public List<IChoiceOption> Choices
+    
+    public IEnumerable<IStoryEvent> NextEvent()
     {
-      get
+      yield return new NarrationEvent(Story.StorySpeaker.Princess, text: "What a wonderful day !");
+      yield return new NarrationEvent(Story.StorySpeaker.Aunt, text: "Don't move a snake !");
+
+      var snakeChoiceInfo = new SnakeChoiceEventInfo();
+      var choiceEvent = new ChoiceEvent(snakeChoiceInfo);
+      yield return choiceEvent;
+      // TODO : automatically raise event if choice is not made
+      if (choiceEvent.PlayerChoice.Text == SnakeChoiceEventInfo.HoldStill.Text)
       {
-        return new List<IChoiceOption>() {
-          new AlwaysTrueOption("Throw her in prison !"),
-          new AlwaysTrueOption("I decide, she stays"),
-          new AlwaysTrueOption("Please leave...")
-        };
+        var testEvent = new TestEvent(() => Context.Agility > 25);
+        yield return testEvent;
+        if (testEvent.Success)
+        {
+          yield return new NarrationEvent(Story.StorySpeaker.Cousin, "Oh you saved me");
+          yield return new NarrationEvent(Story.StorySpeaker.Aunt, "It's too dangerous in here let's leave");
+          Context.CousinSaved = true;
+        }
+        else
+        {
+          yield return new NarrationEvent(Story.StorySpeaker.Cousin, "Oh no I'm beaten");
+          yield return new NarrationEvent(Story.StorySpeaker.Narrator, "She seems really really bad...");
+          yield return new EndEvent("Cousin died", EndEventType.GameOver);
+        }
       }
+      else if (choiceEvent.PlayerChoice.Text == SnakeChoiceEventInfo.LookDown.Text)
+      {
+        yield return new NarrationEvent(Story.StorySpeaker.Aunt, "Why did you move you asshole !");
+        yield return new NarrationEvent(Story.StorySpeaker.Narrator, "The snake bite your cousin !");
+      }
+
+      yield return new EndEvent("Victory", EndEventType.Victory);
     }
   }
 
-  public class SnakeInfo : ISceneInfo
+  public class SnakeChoiceEventInfo : IChoiceEventInfo
   {
-    public IEnumerable<IStoryEvent> NextEvent()
-    {
-      throw new System.NotImplementedException();
-    }
+    public string Name => "Snake Event";
+    public static ChoiceOption HoldStill => new ChoiceOption("Hold still");
+    public static ChoiceOption LookDown => new ChoiceOption("Look down");
+    
+    public List<ChoiceOption> Choices => new List<ChoiceOption>() {HoldStill, LookDown};
   }
 }
