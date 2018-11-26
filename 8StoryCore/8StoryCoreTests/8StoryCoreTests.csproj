@@ -49,20 +49,6 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Architecture\A.cs" />
-    <Compile Include="Architecture\An.cs" />
-    <Compile Include="Architecture\Builders\StoryEngineBuilder.cs" />
-    <Compile Include="Architecture\Builders\StoryEventBuilder.cs" />
-    <Compile Include="Architecture\Builders\StorySceneBuilder.cs" />
-    <Compile Include="Events\Choice\ChoiceEventTests.cs" />
-    <Compile Include="Events\Choice\Options\AlwaysTrueOptionTests.cs" />
-    <Compile Include="Events\Choice\Options\ConditionalOptionTests.cs" />
-    <Compile Include="Events\Narrative\NarrativeEventTests.cs" />
-    <Compile Include="Mockups\PlayerContext.cs" />
-    <Compile Include="StoryEngineTests.cs" />
-    <Compile Include="StorySceneTests.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
