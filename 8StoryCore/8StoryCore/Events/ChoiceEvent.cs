@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using _8StoryCore.Choices;
 
 namespace _8StoryCore.Events
@@ -18,6 +19,7 @@ namespace _8StoryCore.Events
 
     public void Choose(ChoiceOption choiceOption, IPlayerContext context)
     {
+      if (!choiceOption.CanChoose(context)) throw new Exception("cannot choose this");
       PlayerChoice = choiceOption;
     }
   }

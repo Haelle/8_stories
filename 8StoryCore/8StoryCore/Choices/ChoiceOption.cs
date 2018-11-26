@@ -2,11 +2,16 @@
 {
   public class ChoiceOption
   {
-    public string Text { get; private set; }
+    public string Text { get; }
 
     public ChoiceOption(string text)
     {
       Text = text;
+    }
+
+    public bool CanChoose(IPlayerContext context)
+    {
+      return true;
     }
   }
 }

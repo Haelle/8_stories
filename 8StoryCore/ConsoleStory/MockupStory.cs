@@ -31,17 +31,15 @@ namespace ConsoleStory
 
     public IPlayerContext Context { get; }
     public StoryStatus Status { get; set; }
+    public List<IStorySceneInfo> Scenes => new List<IStorySceneInfo>()
+    {
+      new IntroSceneInfo((PlayerContext)Context),
+      new SnakeSceneInfo((PlayerContext)Context)
+    };
 
     public Story()
     {
       Context = new PlayerContext();
-    }
-    
-    public IEnumerable<IStorySceneInfo> NextSceneInfo()
-    {
-      var context = (PlayerContext) Context;
-      yield return new IntroSceneInfo(context);
-      yield return new SnakeSceneInfo(context);
     }
   }
 

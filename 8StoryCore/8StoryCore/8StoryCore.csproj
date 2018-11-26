@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Events\ChoiceEvent.cs" />
     <Compile Include="Choices\ChoiceOption.cs" />
+    <Compile Include="Events\EndEvent.cs" />
     <Compile Include="Events\TestEvent.cs" />
     <Compile Include="Choices\IChoiceEventInfo.cs" />
     <Compile Include="IPlayerContext.cs" />

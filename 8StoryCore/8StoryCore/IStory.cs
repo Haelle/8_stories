@@ -11,6 +11,6 @@ namespace _8StoryCore
   {
     IPlayerContext Context { get; }
     StoryStatus Status { get; }
-    IEnumerable<IStorySceneInfo> NextSceneInfo();
+    List<IStorySceneInfo> Scenes { get; }
   }
 }
