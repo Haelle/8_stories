@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="2" testcasecount="32" result="Skipped" label="Ignored" total="32" passed="30" failed="0" inconclusive="0" skipped="2" asserts="74" engine-version="3.9.0.0" clr-version="4.0.30319.42000" start-time="2018-11-27 17:50:57Z" end-time="2018-11-27 17:50:59Z" duration="1.863891">
+  <command-line><![CDATA["C:\Users\alexis\Documents\8_stories\8StoryCore\packages\NUnit.ConsoleRunner.3.9.0\tools\nunit3-console.exe" .\8StoryCore\8StoryCoreTests\bin\Release\8StoryCoreTests.dll]]></command-line>
+  <test-suite type="Assembly" id="0-1039" name="8StoryCoreTests.dll" fullname="8StoryCoreTests.dll" runstate="Runnable" testcasecount="32" result="Skipped" label="Ignored" site="Child" start-time="2018-11-27 17:50:58Z" end-time="2018-11-27 17:50:59Z" duration="0.952824" total="32" passed="30" failed="0" warnings="0" inconclusive="0" skipped="2" asserts="74">
+    <environment framework-version="3.11.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.17134.0" platform="Win32NT" cwd="C:\Users\alexis\Documents\8_stories" machine-name="DESKTOP-27T228B" user="alexis" user-domain="DESKTOP-27T228B" culture="fr-FR" uiculture="fr-FR" os-architecture="x64" />
+    <settings>
+      <setting name="DisposeRunners" value="True" />
+      <setting name="WorkDirectory" value="C:\Users\alexis\Documents\8_stories" />
+      <setting name="ImageRuntimeVersion" value="4.0.30319" />
+      <setting name="ImageTargetFrameworkName" value=".NETFramework,Version=v4.0" />
+      <setting name="ImageRequiresX86" value="False" />
+      <setting name="ImageRequiresDefaultAppDomainAssemblyResolver" value="False" />
+      <setting name="NumberOfTestWorkers" value="4" />
+    </settings>
+    <properties>
+      <property name="_PID" value="2176" />
+      <property name="_APPDOMAIN" value="domain-" />
+    </properties>
+    <reason>
+      <message><![CDATA[One or more child tests were ignored]]></message>
+    </reason>
+    <test-suite type="TestSuite" id="0-1040" name="_8StoryCoreTests" fullname="_8StoryCoreTests" runstate="Runnable" testcasecount="32" result="Skipped" label="Ignored" site="Child" start-time="2018-11-27 17:50:58Z" end-time="2018-11-27 17:50:59Z" duration="0.925603" total="32" passed="30" failed="0" warnings="0" inconclusive="0" skipped="2" asserts="74">
+      <reason>
+        <message><![CDATA[One or more child tests were ignored]]></message>
+      </reason>
+      <test-suite type="TestSuite" id="0-1044" name="Events" fullname="_8StoryCoreTests.Events" runstate="Runnable" testcasecount="23" result="Skipped" label="Ignored" site="Child" start-time="2018-11-27 17:50:58Z" end-time="2018-11-27 17:50:59Z" duration="0.844677" total="23" passed="21" failed="0" warnings="0" inconclusive="0" skipped="2" asserts="52">
+        <reason>
+          <message><![CDATA[One or more child tests were ignored]]></message>
+        </reason>
+        <test-suite type="TestSuite" id="0-1049" name="ChoiceTests" fullname="_8StoryCoreTests.Events.ChoiceTests" runstate="Runnable" testcasecount="2" result="Skipped" label="Ignored" site="Child" start-time="2018-11-27 17:50:58Z" end-time="2018-11-27 17:50:58Z" duration="0.029989" total="2" passed="0" failed="0" warnings="0" inconclusive="0" skipped="2" asserts="0">
+          <reason>
+            <message><![CDATA[One or more child tests were ignored]]></message>
+          </reason>
+          <test-suite type="TestFixture" id="0-1036" name="ChoiceOptionTests+DeserializeMethod" fullname="_8StoryCoreTests.Events.ChoiceTests.ChoiceOptionTests+DeserializeMethod" classname="_8StoryCoreTests.Events.ChoiceTests.ChoiceOptionTests+DeserializeMethod" runstate="Runnable" testcasecount="2" result="Skipped" label="Ignored" site="Child" start-time="2018-11-27 17:50:58Z" end-time="2018-11-27 17:50:58Z" duration="0.023726" total="2" passed="0" failed="0" warnings="0" inconclusive="0" skipped="2" asserts="0">
+            <properties>
+              <property name="Category" value="XML" />
+            </properties>
+            <reason>
+              <message><![CDATA[One or more child tests were ignored]]></message>
+            </reason>
+            <test-case id="0-1038" name="Invalid" fullname="_8StoryCoreTests.Events.ChoiceTests.ChoiceOptionTests+DeserializeMethod.Invalid" methodname="Invalid" classname="_8StoryCoreTests.Events.ChoiceTests.ChoiceOptionTests+DeserializeMethod" runstate="Ignored" seed="1581113965" result="Skipped" label="Ignored" start-time="2018-11-27 17:50:58Z" end-time="2018-11-27 17:50:58Z" duration="0.006350" asserts="0">
+              <properties>
+                <property name="_SKIPREASON" value="Pending" />
+              </properties>
+              <reason>
+                <message><![CDATA[Pending]]></message>
+              </reason>
+            </test-case>
+            <test-case id="0-1037" name="IsValid" fullname="_8StoryCoreTests.Events.ChoiceTests.ChoiceOptionTests+DeserializeMethod.IsValid" methodname="IsValid" classname="_8StoryCoreTests.Events.ChoiceTests.ChoiceOptionTests+DeserializeMethod" runstate="Ignored" seed="1095114569" result="Skipped" label="Ignored" start-time="2018-11-27 17:50:58Z" end-time="2018-11-27 17:50:58Z" duration="0.000015" asserts="0">
+              <properties>
+                <property name="_SKIPREASON" value="Pending" />
+              </properties>
+              <reason>
+                <message><![CDATA[Pending]]></message>
+              </reason>
+            </test-case>
+          </test-suite>
+        </test-suite>
+        <test-suite type="TestSuite" id="0-1048" name="EndTests" fullname="_8StoryCoreTests.Events.EndTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2018-11-27 17:50:58Z" end-time="2018-11-27 17:50:59Z" duration="0.769777" total="5" passed="5" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="10">
+          <test-suite type="TestFixture" id="0-1030" name="EndEventTests+DeserializeMethod" fullname="_8StoryCoreTests.Events.EndTests.EndEventTests+DeserializeMethod" classname="_8StoryCoreTests.Events.EndTests.EndEventTests+DeserializeMethod" runstate="Runnable" testcasecount="5" result="Passed" start-time="2018-11-27 17:50:58Z" end-time="2018-11-27 17:50:59Z" duration="0.736444" total="5" passed="5" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="10">
+            <properties>
+              <property name="Category" value="XML" />
+            </properties>
+            <test-case id="0-1033" name="InvalidWithoutText" fullname="_8StoryCoreTests.Events.EndTests.EndEventTests+DeserializeMethod.InvalidWithoutText" methodname="InvalidWithoutText" classname="_8StoryCoreTests.Events.EndTests.EndEventTests+DeserializeMethod" runstate="Runnable" seed="1826994472" result="Passed" start-time="2018-11-27 17:50:58Z" end-time="2018-11-27 17:50:59Z" duration="0.664736" asserts="2" />
+            <test-case id="0-1035" name="InvalidWithoutType" fullname="_8StoryCoreTests.Events.EndTests.EndEventTests+DeserializeMethod.InvalidWithoutType" methodname="InvalidWithoutType" classname="_8StoryCoreTests.Events.EndTests.EndEventTests+DeserializeMethod" runstate="Runnable" seed="1265020306" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.001783" asserts="2" />
+            <test-case id="0-1032" name="InvalidWithTextEmpty" fullname="_8StoryCoreTests.Events.EndTests.EndEventTests+DeserializeMethod.InvalidWithTextEmpty" methodname="InvalidWithTextEmpty" classname="_8StoryCoreTests.Events.EndTests.EndEventTests+DeserializeMethod" runstate="Runnable" seed="1112287751" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.001585" asserts="2" />
+            <test-case id="0-1034" name="InvalidWithTypeEmpty" fullname="_8StoryCoreTests.Events.EndTests.EndEventTests+DeserializeMethod.InvalidWithTypeEmpty" methodname="InvalidWithTypeEmpty" classname="_8StoryCoreTests.Events.EndTests.EndEventTests+DeserializeMethod" runstate="Runnable" seed="989191991" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.031348" asserts="1" />
+            <test-case id="0-1031" name="IsValid" fullname="_8StoryCoreTests.Events.EndTests.EndEventTests+DeserializeMethod.IsValid" methodname="IsValid" classname="_8StoryCoreTests.Events.EndTests.EndEventTests+DeserializeMethod" runstate="Runnable" seed="912527502" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.036680" asserts="3" />
+          </test-suite>
+        </test-suite>
+        <test-suite type="TestSuite" id="0-1047" name="ListOfEventsTests" fullname="_8StoryCoreTests.Events.ListOfEventsTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2018-11-27 17:50:58Z" end-time="2018-11-27 17:50:59Z" duration="0.828537" total="6" passed="6" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="21">
+          <test-suite type="TestFixture" id="0-1023" name="ListOfEventsTests+DeserializeMethod" fullname="_8StoryCoreTests.Events.ListOfEventsTests.ListOfEventsTests+DeserializeMethod" classname="_8StoryCoreTests.Events.ListOfEventsTests.ListOfEventsTests+DeserializeMethod" runstate="Runnable" testcasecount="6" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.058702" total="6" passed="6" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="21">
+            <properties>
+              <property name="Category" value="XML" />
+            </properties>
+            <test-case id="0-1026" name="InvalidIfOneEventInvalid" fullname="_8StoryCoreTests.Events.ListOfEventsTests.ListOfEventsTests+DeserializeMethod.InvalidIfOneEventInvalid" methodname="InvalidIfOneEventInvalid" classname="_8StoryCoreTests.Events.ListOfEventsTests.ListOfEventsTests+DeserializeMethod" runstate="Runnable" seed="2010823358" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.038852" asserts="1" />
+            <test-case id="0-1024" name="OnlyNarrativeEvents" fullname="_8StoryCoreTests.Events.ListOfEventsTests.ListOfEventsTests+DeserializeMethod.OnlyNarrativeEvents" methodname="OnlyNarrativeEvents" classname="_8StoryCoreTests.Events.ListOfEventsTests.ListOfEventsTests+DeserializeMethod" runstate="Runnable" seed="472134700" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.003659" asserts="6" />
+            <test-case id="0-1029" name="ThrowExceptionIfInconsistentType" fullname="_8StoryCoreTests.Events.ListOfEventsTests.ListOfEventsTests+DeserializeMethod.ThrowExceptionIfInconsistentType" methodname="ThrowExceptionIfInconsistentType" classname="_8StoryCoreTests.Events.ListOfEventsTests.ListOfEventsTests+DeserializeMethod" runstate="Runnable" seed="1658795970" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.003225" asserts="2" />
+            <test-case id="0-1028" name="ThrowExceptionIfInvalidType" fullname="_8StoryCoreTests.Events.ListOfEventsTests.ListOfEventsTests+DeserializeMethod.ThrowExceptionIfInvalidType" methodname="ThrowExceptionIfInvalidType" classname="_8StoryCoreTests.Events.ListOfEventsTests.ListOfEventsTests+DeserializeMethod" runstate="Runnable" seed="949710875" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.002804" asserts="2" />
+            <test-case id="0-1027" name="ThrowExceptionIfMisspellKey" fullname="_8StoryCoreTests.Events.ListOfEventsTests.ListOfEventsTests+DeserializeMethod.ThrowExceptionIfMisspellKey" methodname="ThrowExceptionIfMisspellKey" classname="_8StoryCoreTests.Events.ListOfEventsTests.ListOfEventsTests+DeserializeMethod" runstate="Runnable" seed="1214847520" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.006287" asserts="2" />
+            <test-case id="0-1025" name="VariousKindOfEvents" fullname="_8StoryCoreTests.Events.ListOfEventsTests.ListOfEventsTests+DeserializeMethod.VariousKindOfEvents" methodname="VariousKindOfEvents" classname="_8StoryCoreTests.Events.ListOfEventsTests.ListOfEventsTests+DeserializeMethod" runstate="Runnable" seed="861052321" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.002843" asserts="8" />
+          </test-suite>
+        </test-suite>
+        <test-suite type="TestSuite" id="0-1046" name="NarrativeTests" fullname="_8StoryCoreTests.Events.NarrativeTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2018-11-27 17:50:58Z" end-time="2018-11-27 17:50:59Z" duration="0.834264" total="5" passed="5" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="11">
+          <test-suite type="TestFixture" id="0-1017" name="NarrativeEventTests+DeserializeMethod" fullname="_8StoryCoreTests.Events.NarrativeTests.NarrativeEventTests+DeserializeMethod" classname="_8StoryCoreTests.Events.NarrativeTests.NarrativeEventTests+DeserializeMethod" runstate="Runnable" testcasecount="5" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.005705" total="5" passed="5" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="11">
+            <properties>
+              <property name="Category" value="XML" />
+            </properties>
+            <test-case id="0-1019" name="InvalidWithEmptySpeaker" fullname="_8StoryCoreTests.Events.NarrativeTests.NarrativeEventTests+DeserializeMethod.InvalidWithEmptySpeaker" methodname="InvalidWithEmptySpeaker" classname="_8StoryCoreTests.Events.NarrativeTests.NarrativeEventTests+DeserializeMethod" runstate="Runnable" seed="100584330" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.001556" asserts="2" />
+            <test-case id="0-1020" name="InvalidWithoutSpeaker" fullname="_8StoryCoreTests.Events.NarrativeTests.NarrativeEventTests+DeserializeMethod.InvalidWithoutSpeaker" methodname="InvalidWithoutSpeaker" classname="_8StoryCoreTests.Events.NarrativeTests.NarrativeEventTests+DeserializeMethod" runstate="Runnable" seed="1322563398" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.000850" asserts="2" />
+            <test-case id="0-1021" name="InvalidWithoutText" fullname="_8StoryCoreTests.Events.NarrativeTests.NarrativeEventTests+DeserializeMethod.InvalidWithoutText" methodname="InvalidWithoutText" classname="_8StoryCoreTests.Events.NarrativeTests.NarrativeEventTests+DeserializeMethod" runstate="Runnable" seed="2004221110" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.000837" asserts="2" />
+            <test-case id="0-1022" name="InvalidWithTextEmpty" fullname="_8StoryCoreTests.Events.NarrativeTests.NarrativeEventTests+DeserializeMethod.InvalidWithTextEmpty" methodname="InvalidWithTextEmpty" classname="_8StoryCoreTests.Events.NarrativeTests.NarrativeEventTests+DeserializeMethod" runstate="Runnable" seed="468956052" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.000887" asserts="2" />
+            <test-case id="0-1018" name="IsValid" fullname="_8StoryCoreTests.Events.NarrativeTests.NarrativeEventTests+DeserializeMethod.IsValid" methodname="IsValid" classname="_8StoryCoreTests.Events.NarrativeTests.NarrativeEventTests+DeserializeMethod" runstate="Runnable" seed="1361951942" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.000973" asserts="3" />
+          </test-suite>
+        </test-suite>
+        <test-suite type="TestSuite" id="0-1045" name="NotificationTests" fullname="_8StoryCoreTests.Events.NotificationTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2018-11-27 17:50:58Z" end-time="2018-11-27 17:50:59Z" duration="0.844503" total="5" passed="5" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="10">
+          <test-suite type="TestFixture" id="0-1011" name="NotificationEventTests+DeserializeMethod" fullname="_8StoryCoreTests.Events.NotificationTests.NotificationEventTests+DeserializeMethod" classname="_8StoryCoreTests.Events.NotificationTests.NotificationEventTests+DeserializeMethod" runstate="Runnable" testcasecount="5" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.010057" total="5" passed="5" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="10">
+            <properties>
+              <property name="Category" value="XML" />
+            </properties>
+            <test-case id="0-1016" name="InvalidWithoutText" fullname="_8StoryCoreTests.Events.NotificationTests.NotificationEventTests+DeserializeMethod.InvalidWithoutText" methodname="InvalidWithoutText" classname="_8StoryCoreTests.Events.NotificationTests.NotificationEventTests+DeserializeMethod" runstate="Runnable" seed="591425067" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.001498" asserts="2" />
+            <test-case id="0-1014" name="InvalidWithoutType" fullname="_8StoryCoreTests.Events.NotificationTests.NotificationEventTests+DeserializeMethod.InvalidWithoutType" methodname="InvalidWithoutType" classname="_8StoryCoreTests.Events.NotificationTests.NotificationEventTests+DeserializeMethod" runstate="Runnable" seed="611355427" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.002678" asserts="2" />
+            <test-case id="0-1015" name="InvalidWithTextEmpty" fullname="_8StoryCoreTests.Events.NotificationTests.NotificationEventTests+DeserializeMethod.InvalidWithTextEmpty" methodname="InvalidWithTextEmpty" classname="_8StoryCoreTests.Events.NotificationTests.NotificationEventTests+DeserializeMethod" runstate="Runnable" seed="1713159743" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.001781" asserts="2" />
+            <test-case id="0-1013" name="InvalidWithTypeEmpty" fullname="_8StoryCoreTests.Events.NotificationTests.NotificationEventTests+DeserializeMethod.InvalidWithTypeEmpty" methodname="InvalidWithTypeEmpty" classname="_8StoryCoreTests.Events.NotificationTests.NotificationEventTests+DeserializeMethod" runstate="Runnable" seed="967206631" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.001907" asserts="1" />
+            <test-case id="0-1012" name="IsValid" fullname="_8StoryCoreTests.Events.NotificationTests.NotificationEventTests+DeserializeMethod.IsValid" methodname="IsValid" classname="_8StoryCoreTests.Events.NotificationTests.NotificationEventTests+DeserializeMethod" runstate="Runnable" seed="1340421204" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.001544" asserts="3" />
+          </test-suite>
+        </test-suite>
+      </test-suite>
+      <test-suite type="TestSuite" id="0-1041" name="Trials" fullname="_8StoryCoreTests.Trials" runstate="Runnable" testcasecount="9" result="Passed" start-time="2018-11-27 17:50:58Z" end-time="2018-11-27 17:50:59Z" duration="0.924620" total="9" passed="9" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="22">
+        <test-suite type="TestSuite" id="0-1043" name="BooleanTests" fullname="_8StoryCoreTests.Trials.BooleanTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2018-11-27 17:50:58Z" end-time="2018-11-27 17:50:59Z" duration="0.898053" total="4" passed="4" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="9">
+          <test-suite type="TestFixture" id="0-1006" name="TrialBooleanTests+DeserializeMethod" fullname="_8StoryCoreTests.Trials.BooleanTests.TrialBooleanTests+DeserializeMethod" classname="_8StoryCoreTests.Trials.BooleanTests.TrialBooleanTests+DeserializeMethod" runstate="Runnable" testcasecount="4" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.053161" total="4" passed="4" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="9">
+            <properties>
+              <property name="Category" value="XML" />
+            </properties>
+            <test-case id="0-1008" name="InvalidWithoutObjective" fullname="_8StoryCoreTests.Trials.BooleanTests.TrialBooleanTests+DeserializeMethod.InvalidWithoutObjective" methodname="InvalidWithoutObjective" classname="_8StoryCoreTests.Trials.BooleanTests.TrialBooleanTests+DeserializeMethod" runstate="Runnable" seed="770000858" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.042413" asserts="2" />
+            <test-case id="0-1009" name="InvalidWithPropertiesEmpty" fullname="_8StoryCoreTests.Trials.BooleanTests.TrialBooleanTests+DeserializeMethod.InvalidWithPropertiesEmpty" methodname="InvalidWithPropertiesEmpty" classname="_8StoryCoreTests.Trials.BooleanTests.TrialBooleanTests+DeserializeMethod" runstate="Runnable" seed="109287185" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.004962" asserts="2" />
+            <test-case id="0-1010" name="InvalidWithPropertiesError" fullname="_8StoryCoreTests.Trials.BooleanTests.TrialBooleanTests+DeserializeMethod.InvalidWithPropertiesError" methodname="InvalidWithPropertiesError" classname="_8StoryCoreTests.Trials.BooleanTests.TrialBooleanTests+DeserializeMethod" runstate="Runnable" seed="1319991037" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.001182" asserts="2" />
+            <test-case id="0-1007" name="IsValid" fullname="_8StoryCoreTests.Trials.BooleanTests.TrialBooleanTests+DeserializeMethod.IsValid" methodname="IsValid" classname="_8StoryCoreTests.Trials.BooleanTests.TrialBooleanTests+DeserializeMethod" runstate="Runnable" seed="1533032374" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.003861" asserts="3" />
+          </test-suite>
+        </test-suite>
+        <test-suite type="TestSuite" id="0-1042" name="ScoreTests" fullname="_8StoryCoreTests.Trials.ScoreTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2018-11-27 17:50:58Z" end-time="2018-11-27 17:50:59Z" duration="0.924601" total="5" passed="5" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="13">
+          <test-suite type="TestFixture" id="0-1000" name="TrialScoreTests+DeserializeMethod" fullname="_8StoryCoreTests.Trials.ScoreTests.TrialScoreTests+DeserializeMethod" classname="_8StoryCoreTests.Trials.ScoreTests.TrialScoreTests+DeserializeMethod" runstate="Runnable" testcasecount="5" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.026364" total="5" passed="5" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="13">
+            <properties>
+              <property name="Category" value="XML" />
+            </properties>
+            <test-case id="0-1003" name="InvalidWithoutObjective" fullname="_8StoryCoreTests.Trials.ScoreTests.TrialScoreTests+DeserializeMethod.InvalidWithoutObjective" methodname="InvalidWithoutObjective" classname="_8StoryCoreTests.Trials.ScoreTests.TrialScoreTests+DeserializeMethod" runstate="Runnable" seed="496247165" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.015676" asserts="2" />
+            <test-case id="0-1004" name="InvalidWithPropertiesEmpty" fullname="_8StoryCoreTests.Trials.ScoreTests.TrialScoreTests+DeserializeMethod.InvalidWithPropertiesEmpty" methodname="InvalidWithPropertiesEmpty" classname="_8StoryCoreTests.Trials.ScoreTests.TrialScoreTests+DeserializeMethod" runstate="Runnable" seed="2075657332" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.001518" asserts="2" />
+            <test-case id="0-1005" name="InvalidWithPropertiesError" fullname="_8StoryCoreTests.Trials.ScoreTests.TrialScoreTests+DeserializeMethod.InvalidWithPropertiesError" methodname="InvalidWithPropertiesError" classname="_8StoryCoreTests.Trials.ScoreTests.TrialScoreTests+DeserializeMethod" runstate="Runnable" seed="294760860" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.001689" asserts="2" />
+            <test-case id="0-1001" name="IsValid" fullname="_8StoryCoreTests.Trials.ScoreTests.TrialScoreTests+DeserializeMethod.IsValid" methodname="IsValid" classname="_8StoryCoreTests.Trials.ScoreTests.TrialScoreTests+DeserializeMethod" runstate="Runnable" seed="841494295" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.005206" asserts="4" />
+            <test-case id="0-1002" name="IsValidWithMinimalInfos" fullname="_8StoryCoreTests.Trials.ScoreTests.TrialScoreTests+DeserializeMethod.IsValidWithMinimalInfos" methodname="IsValidWithMinimalInfos" classname="_8StoryCoreTests.Trials.ScoreTests.TrialScoreTests+DeserializeMethod" runstate="Runnable" seed="1840354250" result="Passed" start-time="2018-11-27 17:50:59Z" end-time="2018-11-27 17:50:59Z" duration="0.001528" asserts="3" />
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

@@ -2,7 +2,7 @@ language: csharp
 solution: 8StoryCore/8StoryCore.sln
 install:
   - nuget restore 8StoryCore/8StoryCore.sln
-  - nuget install NUnit.Runners -Version 3.9.0 -OutputDirectory testrunner
 script:
-  - msbuild /p:Configuration=Release 8StoryCore/8StoryCore.sln
-  - mono ./testrunner/NUnit.Runners.3.9.0/tools/nunit-console.exe ./8StoryCore/8StoryCoreTests/bin/Debug/8StoryCoreTests.dll
+  - msbuild /p:Configuration=Release /p:PostBuildEvent= 8StoryCore/8StoryCore.sln
+  - mono ./8StoryCore/packages/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./8StoryCore/8StoryCoreTests/bin/Release/8StoryCoreTests.dll
+    
