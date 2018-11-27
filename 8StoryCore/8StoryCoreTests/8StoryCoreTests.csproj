@@ -49,9 +49,6 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Events\ChoiceOptionTests.cs" />
     <Compile Include="Events\EndEventTests.cs" />
     <Compile Include="Events\ListOfEventsTests.cs" />
@@ -98,6 +95,9 @@
     <Content Include="Resources\Trials\TrialScoreValid.xml" />
     <Content Include="Resources\Options\OptionValid.xml" />
     <Content Include="Resources\Events\ListOfEvents\ValidOnlyNarrative.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
   <ProjectExtensions>
