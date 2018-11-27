@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ChoiceOption>
+  <Text>Try to climb</Text>
+  <Trial>
+
+  </Trial>
+  <ConsecutiveEvents>
+    <ISceneEvent AssemblyQualifiedName="Narrative">
+
+    </ISceneEvent>
+  </ConsecutiveEvents>
+</ChoiceOption>

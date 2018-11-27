@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ListOfEvents>
+  <ISceneEvent AssemblyQualifiedName="_8StoryCoreTests.Events.NarrativeEvent">
+    <NarrativeEvent>
+      <Speaker>King</Speaker>
+      <Text>The King is speaking</Text>
+    </NarrativeEvent>
+  </ISceneEvent>
+  <ISceneEvent AssemblyQualifiedName="_8StoryCoreTests.Events.NarrativeEvent">
+    <NarrativeEvent>
+      <Speaker>Princess</Speaker>
+      <Text>The Princess is speaking</Text>
+    </NarrativeEvent>
+  </ISceneEvent>
+  <ISceneEvent AssemblyQualifiedName="_8StoryCoreTests.Events.NarrativeEvent">
+    <NarrativeEvent>
+      <Speaker>Narrator</Speaker>
+      <Text>The Narrator is speaking</Text>
+    </NarrativeEvent>
+  </ISceneEvent>
+</ListOfEvents>

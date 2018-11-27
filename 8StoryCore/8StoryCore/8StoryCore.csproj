@@ -42,6 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Events\ChoiceEvent.cs" />
+    <Compile Include="Events\ChoiceOption.cs" />
+    <Compile Include="Events\EndEvent.cs" />
+    <Compile Include="Events\ISceneEvent.cs" />
+    <Compile Include="Events\ListOfEvents.cs" />
+    <Compile Include="Events\NarrativeEvent.cs" />
+    <Compile Include="Events\NotificationEvent.cs" />
+    <Compile Include="Trials\ITrial.cs" />
+    <Compile Include="Trials\TrialBoolean.cs" />
+    <Compile Include="Trials\TrialScore.cs" />
+    <Compile Include="IContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
