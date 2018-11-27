@@ -8,6 +8,7 @@ namespace _8StoryCoreTests.Events.ChoiceTests
 {
   class ChoiceOptionTests
   {
+    [Category("XML")]
     class DeserializeMethod : DeserializeToolsTests
     {
       ChoiceOption LoadOption(string testFilePath)

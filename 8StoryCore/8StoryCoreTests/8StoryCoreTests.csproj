@@ -57,39 +57,47 @@
     <Compile Include="Events\ListOfEventsTests.cs" />
     <Compile Include="Events\NarrativeEventTests.cs" />
     <Compile Include="Events\NotificationEventTests.cs" />
-    <Compile Include="Events\Tools.cs" />
-    <Compile Include="Test.cs" />
+    <Compile Include="Events\TrialEventTests.cs" />
+    <Compile Include="Tools.cs" />
     <Compile Include="Trials\TrialBooleanTests.cs" />
     <Compile Include="Trials\TrialScoreTests.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="Data\Events\End\EndInvalidTextEmpty.xml" />
-    <Content Include="Data\Events\End\EndInvalidText.xml" />
-    <Content Include="Data\Events\End\EndInvalidTypeEmpty.xml" />
-    <Content Include="Data\Events\End\EndInvalidType.xml" />
-    <Content Include="Data\Events\End\EndValid.xml" />
-    <Content Include="Data\Events\Narrative\NarrativeInvalidSpeakerEmpty.xml" />
-    <Content Include="Data\Events\Narrative\NarrativeInvalidSpeaker.xml" />
-    <Content Include="Data\Events\Narrative\NarrativeInvalidTextEmpty.xml" />
-    <Content Include="Data\Events\Narrative\NarrativeInvalidText.xml" />
-    <Content Include="Data\Events\Narrative\NarrativeValid.xml" />
-    <Content Include="Data\Events\Notification\NotificationInvalidTextEmpty.xml" />
-    <Content Include="Data\Events\Notification\NotificationInvalidText.xml" />
-    <Content Include="Data\Events\Notification\NotificationInvalidTypeEmpty.xml" />
-    <Content Include="Data\Events\Notification\NotificationInvalidType.xml" />
-    <Content Include="Data\Events\Notification\NotificationValid.xml" />
-    <Content Include="Data\Trials\TrialBooleanInvalidPropertiesEmpty.xml" />
-    <Content Include="Data\Trials\TrialBooleanInvalidPropertiesError.xml" />
-    <Content Include="Data\Trials\TrialBooleanInvalidObjective.xml" />
-    <Content Include="Data\Trials\TrialBooleanValid.xml" />
-    <Content Include="Data\Trials\TrialScoreInvalidPropertiesEmpty.xml" />
-    <Content Include="Data\Trials\TrialScoreInvalidPropertiesError.xml" />
-    <Content Include="Data\Trials\TrialScoreInvalidObjective.xml" />
-    <Content Include="Data\Trials\TrialScoreValidMinimal.xml" />
-    <Content Include="Data\Trials\TrialScoreValid.xml" />
-    <Content Include="Data\Options\OptionValid.xml" />
-    <Content Include="Data\Scenes\OnlyNarrative.xml" />
+    <Folder Include="Resources\Scenes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Events\End\EndInvalidTextEmpty.xml" />
+    <Content Include="Resources\Events\End\EndInvalidText.xml" />
+    <Content Include="Resources\Events\End\EndInvalidTypeEmpty.xml" />
+    <Content Include="Resources\Events\End\EndInvalidType.xml" />
+    <Content Include="Resources\Events\End\EndValid.xml" />
+    <Content Include="Resources\Events\ListOfEvents\InvalidMisspellKey.xml" />
+    <Content Include="Resources\Events\ListOfEvents\InvalidInvalidType.xml" />
+    <Content Include="Resources\Events\ListOfEvents\InvalidInconsistentType.xml" />
+    <Content Include="Resources\Events\ListOfEvents\ValidVariousEvents.xml" />
+    <Content Include="Resources\Events\Narrative\NarrativeInvalidSpeakerEmpty.xml" />
+    <Content Include="Resources\Events\Narrative\NarrativeInvalidSpeaker.xml" />
+    <Content Include="Resources\Events\Narrative\NarrativeInvalidTextEmpty.xml" />
+    <Content Include="Resources\Events\Narrative\NarrativeInvalidText.xml" />
+    <Content Include="Resources\Events\Narrative\NarrativeValid.xml" />
+    <Content Include="Resources\Events\Notification\NotificationInvalidTextEmpty.xml" />
+    <Content Include="Resources\Events\Notification\NotificationInvalidText.xml" />
+    <Content Include="Resources\Events\Notification\NotificationInvalidTypeEmpty.xml" />
+    <Content Include="Resources\Events\Notification\NotificationInvalidType.xml" />
+    <Content Include="Resources\Events\Notification\NotificationValid.xml" />
+    <Content Include="Resources\Events\Trial\TrialValid.xml" />
+    <Content Include="Resources\Events\ListOfEvents\InvalidOneEvent.xml" />
+    <Content Include="Resources\Trials\TrialBooleanInvalidPropertiesEmpty.xml" />
+    <Content Include="Resources\Trials\TrialBooleanInvalidPropertiesError.xml" />
+    <Content Include="Resources\Trials\TrialBooleanInvalidObjective.xml" />
+    <Content Include="Resources\Trials\TrialBooleanValid.xml" />
+    <Content Include="Resources\Trials\TrialScoreInvalidPropertiesEmpty.xml" />
+    <Content Include="Resources\Trials\TrialScoreInvalidPropertiesError.xml" />
+    <Content Include="Resources\Trials\TrialScoreInvalidObjective.xml" />
+    <Content Include="Resources\Trials\TrialScoreValidMinimal.xml" />
+    <Content Include="Resources\Trials\TrialScoreValid.xml" />
+    <Content Include="Resources\Options\OptionValid.xml" />
+    <Content Include="Resources\Events\ListOfEvents\ValidOnlyNarrative.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
   <ProjectExtensions>

@@ -10,6 +10,7 @@ namespace _8StoryCoreTests.Trials.ScoreTests
 {
   class TrialScoreTests
   {
+    [Category("XML")]
     class DeserializeMethod : DeserializeToolsTests
     {
       TrialScore LoadTrial(string testFilePath)

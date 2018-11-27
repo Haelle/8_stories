@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ListOfEvents>
+  <ISceneEvent AssemblyQualifiedName="_8StoryCore.Events.NarrativeEvent">
+    <NarrativeEvent>
+      <Speaker>King</Speaker>
+      <Text>The King is speaking</Text>
+    </NarrativeEvent>
+  </ISceneEvent>
+  <ISceneEvent AssemblyQualifiedName="_8StoryCore.Events.NotificationEvent">
+    <NotificationEvent>
+      <Text>You pass a level !</Text>
+    </NotificationEvent>
+  </ISceneEvent>
+  <ISceneEvent AssemblyQualifiedName="_8StoryCore.Events.EndEvent">
+    <EndEvent>
+      <Type>GameOver</Type>
+      <Text>You're dead (or not?)</Text>
+    </EndEvent>
+  </ISceneEvent>
+  <ISceneEvent AssemblyQualifiedName="_8StoryCore.Events.NarrativeEvent">
+    <NarrativeEvent>
+      <Speaker>Someone</Speaker>
+      <Text>Someone is speaking</Text>
+    </NarrativeEvent>
+  </ISceneEvent>
+</ListOfEvents>

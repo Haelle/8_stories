@@ -8,6 +8,7 @@ namespace _8StoryCoreTests.Events.NarrativeTests
 {
   class NarrativeEventTests
   {
+    [Category("XML")]
     class DeserializeMethod : DeserializeToolsTests
     {
       NarrativeEvent LoadEvent(string testFilePath)

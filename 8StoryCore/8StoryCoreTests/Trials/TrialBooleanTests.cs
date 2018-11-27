@@ -10,6 +10,7 @@ namespace _8StoryCoreTests.Trials.BooleanTests
 {
   class TrialBooleanTests
   {
+    [Category("XML")]
     class DeserializeMethod : DeserializeToolsTests
     {
       TrialBoolean LoadTrial(string testFilePath)

@@ -49,13 +49,13 @@
     <Compile Include="Events\ListOfEvents.cs" />
     <Compile Include="Events\NarrativeEvent.cs" />
     <Compile Include="Events\NotificationEvent.cs" />
+    <Compile Include="Events\TrialEvent.cs" />
     <Compile Include="Trials\ITrial.cs" />
     <Compile Include="Trials\TrialBoolean.cs" />
     <Compile Include="Trials\TrialScore.cs" />
     <Compile Include="IContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>copy "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)..\Assets\Plugins\$(ProjectName).dll"</PostBuildEvent>

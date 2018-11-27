@@ -1,6 +1,4 @@
-﻿using System.Xml.Serialization;
-
-namespace _8StoryCore.Events
+﻿namespace _8StoryCore.Events
 {
   public class NarrativeEvent : ISceneEvent
   {

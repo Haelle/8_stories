@@ -4,10 +4,12 @@ using System.Xml.Serialization;
 using NUnit.Framework;
 using _8StoryCore.Events;
 
+// ReSharper disable once CheckNamespace
 namespace _8StoryCoreTests.Events.NotificationTests
 {
   class NotificationEventTests
   {
+    [Category("XML")]
     class DeserializeMethod : DeserializeToolsTests
     {
       NotificationEvent LoadEvent(string testFilePath)

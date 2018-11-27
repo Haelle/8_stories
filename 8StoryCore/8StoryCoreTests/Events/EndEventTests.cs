@@ -9,6 +9,7 @@ namespace _8StoryCoreTests.Events.EndTests
 {
   class EndEventTests
   {
+    [Category("XML")]
     class DeserializeMethod : DeserializeToolsTests
     {
       EndEvent LoadEvent(string testFilePath)

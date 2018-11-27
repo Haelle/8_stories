@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ListOfEvents>
+  <ISecneEvent AssemblyQualifiedName="_8StoryCore.Events.NarrativeEvent">
+    <NarrativeEvent>
+      <Speaker>King</Speaker>
+      <Text>The King is speaking</Text>
+    </NarrativeEvent>
+  </ISecneEvent>
+  <ISceneEvent AssemblyQualifiedName="_8StoryCore.Events.NarrativeEvent">
+    <NarrativeEvent>
+      <Speaker>Someone</Speaker>
+      <Text>Someone is speaking</Text>
+    </NarrativeEvent>
+  </ISceneEvent>
+</ListOfEvents>

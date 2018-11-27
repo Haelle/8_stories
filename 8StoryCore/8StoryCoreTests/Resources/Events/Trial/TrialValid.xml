@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TrialEvent>
+  <Text>And you try to climb...</Text>
+  <ITrialEvent AssemblyQualifiedName="_8StoryCore.Trials.TrialScore">
+    <TrialScore>
+      <Objective>75</Objective>
+      <PartialObjective>50</PartialObjective>
+      <Properties>Athletic</Properties>
+      <Properties>Climbing</Properties>
+    </TrialScore>
+  </ITrialEvent>
+  <SuccessEvents></SuccessEvents>
+  <PartialSuccessEvents></PartialSuccessEvents>
+  <FailureEvents></FailureEvents>
+</TrialEvent>
