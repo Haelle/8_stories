@@ -16,6 +16,7 @@ namespace ConsoleTests
       //AddressExample.RunSerialize();
       //AddressExample.RunDeserialize();
 
+      //SerialiseInterface.SerialiseAnimals();
       SerialiseInterface.DeserializeAnimals();
     }
   }
