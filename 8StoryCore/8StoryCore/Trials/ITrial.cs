@@ -1,4 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Xml;
+using System.Xml.Schema;
+using System.Xml.Serialization;
+using _8StoryCore.Events;
 
 namespace _8StoryCore.Trials
 {
@@ -9,10 +14,11 @@ namespace _8StoryCore.Trials
     Failure
   }
 
-  public interface ITrial
+  public abstract class ITrial
   {
-    bool Valid();
-    TrialResultType Try(IContext ctx);
-    List<string> Properties { get; set; }
+    [XmlElement("Properties")]
+    public abstract List<string> Properties { get; set; }
+    public abstract bool Valid();
+    public abstract TrialResultType Try(IContext ctx);
   }
 }

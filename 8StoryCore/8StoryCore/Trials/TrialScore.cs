@@ -6,17 +6,17 @@ namespace _8StoryCore.Trials
 {
   public class TrialScore : ITrial
   {
+    [XmlElement("Properties")]
+    public override List<string> Properties { get; set; }
     public int? Objective { get; set; }
     public int PartialObjective { get; set; }
-    [XmlElement("Properties")]
-    public List<string> Properties { get; set; }
 
-    public TrialResultType Try(IContext ctx)
+    public override TrialResultType Try(IContext ctx)
     {
       throw new NotImplementedException();
     }
 
-    public bool Valid()
+    public override bool Valid()
     {
       foreach (var property in Properties)
         if (string.IsNullOrEmpty(property)) return false;

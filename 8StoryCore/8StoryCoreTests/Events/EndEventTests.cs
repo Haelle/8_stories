@@ -26,6 +26,7 @@ namespace _8StoryCoreTests.Events.EndTests
       {
         var testFilePath = Path.Combine(BasePath, "Events", "End", "EndValid.xml");
         var endEvent = LoadEvent(testFilePath);
+
         Assert.IsTrue(endEvent.Valid());
         Assert.AreEqual("You are dead", endEvent.Text);
         Assert.AreEqual(EndEventType.GameOver, endEvent.Type);
